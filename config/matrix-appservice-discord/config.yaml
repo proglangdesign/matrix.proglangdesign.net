@@ -1,0 +1,21 @@
+bridge:
+  domain: "matrix.qipl.org"
+  homeserverUrl: "http://localhost:8008"
+  enableSelfServiceBridging: true
+  disableEveryoneMention: true
+  disableHereMention: true
+
+auth:
+  clientID: "526548658511151134"
+  botToken: "\discordBotToken"
+
+database:
+  userStorePath: "\data/matrix-appservice-discord/user-store.db"
+  roomStorePath: "\data/matrix-appservice-discord/room-store.db"
+  filename: "\data/matrix-appservice-discord/discord.db"
+
+room:
+  defaultVisibility: "public"
+
+channel:
+  namePattern: ":name | :guild"

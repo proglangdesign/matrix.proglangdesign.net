@@ -1,0 +1,83 @@
+homeserver:
+  url: "http://localhost:8008"
+  media_url: "https://matrix.qipl.org"
+  domain: "matrix.qipl.org"
+
+  enablePresence: true
+
+ircService:
+  databaseUri: "nedb://\data/matrix-appservice-irc"
+
+  servers:
+    chat.freenode.net:
+      name: "Freenode"
+      networkId: "freenode"
+
+      port: 6697
+      ssl: true
+      sslselfsign: false
+      # The bot fails to connect to freenode with sasl on, for an unknown reason.
+      # I think it might be trying to use an incorrect username, but I'm not sure.
+      # However, I don't think this is all that big of a deal for now.
+      # I'll have to look into fixing this later.
+      sasl: false
+      allowExpiredCerts: false
+
+      sendConnectionMessages: true
+
+      botConfig:
+        enabled: true
+        nick: "qipl-matrix"
+        password: "\ircBotPassword"
+        joinChannelsIfNoUsers: false
+
+      membershipLists:
+        enabled: true
+
+        global:
+          ircToMatrix:
+            initial: true
+            incremental: true
+
+          matrixToIrc:
+            initial: true
+            incremental: true
+
+      mappings:
+        "#pld-discord-test": ["!PnpwEZAwEtUoYqpfJX:matrix.qipl.org"]
+
+      matrixClients:
+        userTemplate: "@irc_$NICK"
+        displayName: "$NICK"
+
+      ircClients:
+        nickTemplate: "$DISPLAY[q]"
+        allowNickChanges: true
+        maxClients: 150
+
+      # NOTICE: this section is supposedly not necessary,
+      # but the appservice WILL NOT RUN without it
+      dynamicChannels:
+        enabled: false
+        createAlias: true
+        published: true
+        joinRule: public
+        federate: true
+        aliasTemplate: "#irc_$CHANNEL"
+
+  ident:
+    enabled: true
+    port: 113
+    address: "::"
+
+  logging:
+    level: "debug"
+    logfile: "\data/matrix-appservice-irc/log/debug.log"
+    errfile: "\data/matrix-appservice-irc/log/errors.log"
+    toConsole: true
+    maxFiles: 5
+
+  passwordEncryptionKeyPath: "\secrets/passkey.pem"
+
+  matrixHandler:
+    eventCacheSize: 4096

@@ -1,0 +1,9 @@
+[submodule "software/matrix-appservice-discord"]
+	path = software/matrix-appservice-discord
+	url = https://github.com/Half-Shot/matrix-appservice-discord
+[submodule "software/riot-web"]
+	path = software/riot-web
+	url = https://github.com/vector-im/riot-web.git
+[submodule "software/matrix-appservice-irc"]
+	path = software/matrix-appservice-irc
+	url = https://github.com/Half-Shot/matrix-appservice-irc.git

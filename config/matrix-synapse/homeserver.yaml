@@ -1,0 +1,109 @@
+# We don't use these values, but for whatever reason,
+# synapse requires them to exist to start at all.
+tls_certificate_path: "\secrets/certs/homeserver.tls.crt"
+tls_private_key_path: "\secrets/certs/homeserver.tls.key"
+tls_dh_params_path: "\secrets/certs/homeserver.tls.dh"
+
+no_tls: True
+
+pid_file: "/var/run/matrix-synapse.pid"
+
+web_client: True
+web_client_location: "/opt/riot"
+
+public_baseurl: https://matrix.qipl.org/
+
+federation_domain_whitelist: []
+
+listeners:
+  - port: 8008
+    tls: false
+    bind_addresses:
+      - '::1'
+      - '127.0.0.1'
+    type: http
+
+    x_forwarded: true
+
+    resources:
+      - names: [client, webclient]
+        compress: true
+      - names: [federation]
+        compress: false
+
+database:
+  name: "sqlite3"
+  args:
+    database: "/var/lib/matrix-synapse/homeserver.db"
+
+log_config: "/etc/matrix-synapse/log.yaml"
+
+media_store_path: "/var/lib/matrix-synapse/media"
+uploads_path: "/var/lib/matrix-synapse/uploads"
+
+max_upload_size: "10M"
+max_image_pixels: "32M"
+
+dynamic_thumbnails: true
+
+thumbnail_sizes:
+- width: 32
+  height: 32
+  method: crop
+- width: 96
+  height: 96
+  method: crop
+- width: 320
+  height: 240
+  method: scale
+- width: 640
+  height: 480
+  method: scale
+- width: 800
+  height: 600
+  method: scale
+
+enable_registration: True
+registration_shared_secret: "\registrationSharedSecret"
+allow_guest_access: False
+
+trusted_third_party_id_servers:
+    - matrix.org
+    - vector.im
+    - riot.im
+
+auto_join_rooms:
+    - "#info:matrix.qipl.org"
+
+room_invite_state_types:
+    - "m.room.join_rules"
+    - "m.room.canonical_alias"
+    - "m.room.avatar"
+    - "m.room.name"
+
+
+app_service_config_files:
+    - "\config/matrix-appservice-irc/registration.yaml"
+    - "\config/matrix-appservice-discord/registration.yaml"
+
+signing_key_path: "\secrets/certs/homeserver.signing.key"
+
+key_refresh_interval: "1d" # 1 Day.
+
+perspectives:
+  servers:
+    "matrix.org":
+      verify_keys:
+        "ed25519:auto":
+          key: "Noi6WqcDj0QmPxCNQqgezwTlBKrfqehY1u2FyWP9uYw"
+
+password_config:
+   enabled: true
+   pepper: "\passwordPepper"
+
+enable_group_creation: true
+
+group_creation_prefix: "unofficial/"
+
+user_directory:
+   search_all_users: true
