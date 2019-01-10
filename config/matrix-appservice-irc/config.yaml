@@ -44,7 +44,8 @@ ircService:
             incremental: true
 
       mappings:
-        "#pld-discord-test": ["!PnpwEZAwEtUoYqpfJX:matrix.qipl.org"]
+        "#proglangdesign": ["!buMmDyUoEScSqZbIyH:matrix.qipl.org"]
+        "#qipl": ["!hGhxOgfPgXsGcQiMlo:matrix.qipl.org"]
 
       matrixClients:
         userTemplate: "@irc_$NICK"
@@ -53,17 +54,17 @@ ircService:
       ircClients:
         nickTemplate: "$DISPLAY[q]"
         allowNickChanges: true
-        maxClients: 300
+        maxClients: 500
 
       # NOTICE: this section is supposedly not necessary,
       # but the appservice WILL NOT RUN without it
       dynamicChannels:
-        enabled: false
+        enabled: true
         createAlias: true
         published: true
         joinRule: public
-        federate: true
-        aliasTemplate: "#irc_$CHANNEL"
+        federate: false
+        aliasTemplate: "#irc_$SERVER_$CHANNEL"
 
   ident:
     enabled: true

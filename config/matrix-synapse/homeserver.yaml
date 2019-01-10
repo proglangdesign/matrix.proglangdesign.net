@@ -13,7 +13,8 @@ web_client_location: "/opt/riot"
 
 public_baseurl: https://matrix.qipl.org/
 
-federation_domain_whitelist: []
+# do not restrict federation domains
+# federation_domain_whitelist: []
 
 listeners:
   - port: 8008
