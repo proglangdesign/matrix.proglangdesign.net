@@ -6,7 +6,7 @@ bridge:
   disableHereMention: true
 
 auth:
-  clientID: "526548658511151134"
+  clientID: "541288099972513792"
   botToken: "\discordBotToken"
 
 database:

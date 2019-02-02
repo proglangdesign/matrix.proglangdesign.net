@@ -45,7 +45,7 @@ uploads_path: "/var/lib/matrix-synapse/uploads"
 max_upload_size: "10M"
 max_image_pixels: "32M"
 
-dynamic_thumbnails: true
+dynamic_thumbnails: false
 
 thumbnail_sizes:
 - width: 32

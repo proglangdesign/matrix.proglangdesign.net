@@ -20,7 +20,7 @@ ircService:
       # I think it might be trying to use an incorrect username, but I'm not sure.
       # However, I don't think this is all that big of a deal for now.
       # I'll have to look into fixing this later.
-      sasl: false
+      sasl: true
       allowExpiredCerts: false
 
       sendConnectionMessages: true
@@ -63,7 +63,7 @@ ircService:
         createAlias: true
         published: true
         joinRule: public
-        federate: false
+        federate: true
         aliasTemplate: "#irc_$SERVER_$CHANNEL"
 
   ident:
