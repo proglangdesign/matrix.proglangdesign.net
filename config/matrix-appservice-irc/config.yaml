@@ -44,6 +44,8 @@ ircService:
             incremental: true
 
       mappings:
+        "##programminglanguages": ["!BVHhKSVoFdUqfCRVJS:matrix.qipl.org"]
+        "#programminglanguages": ["!tgXrXRVCKqimmoEzPY:matrix.qipl.org"]
         "#proglangdesign": ["!buMmDyUoEScSqZbIyH:matrix.qipl.org"]
         "#qipl": ["!hGhxOgfPgXsGcQiMlo:matrix.qipl.org"]
 
