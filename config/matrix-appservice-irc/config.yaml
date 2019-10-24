@@ -3,7 +3,7 @@ homeserver:
   media_url: "https://matrix.qipl.org"
   domain: "matrix.qipl.org"
 
-  enablePresence: true
+  enablePresence: false
 
 ircService:
   databaseUri: "nedb://\data/matrix-appservice-irc"
@@ -44,8 +44,8 @@ ircService:
             incremental: true
 
       mappings:
-        "##programminglanguages": ["!BVHhKSVoFdUqfCRVJS:matrix.qipl.org"]
-        "#proglangdesign": ["!buMmDyUoEScSqZbIyH:matrix.qipl.org"]
+        "##programminglanguages": ["!vIxLjPCDpaaUhdPrDF:matrix.qipl.org"]
+        "#proglangdesign": ["!llGWMUlaqNDRJzNGqb:matrix.qipl.org"]
 
       matrixClients:
         userTemplate: "@irc_$NICK"
@@ -59,7 +59,7 @@ ircService:
       # NOTICE: this section is supposedly not necessary,
       # but the appservice WILL NOT RUN without it
       dynamicChannels:
-        enabled: true
+        enabled: false
         createAlias: true
         published: true
         joinRule: public

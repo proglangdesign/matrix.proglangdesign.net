@@ -1,7 +1,7 @@
 bridge:
   domain: "matrix.qipl.org"
   homeserverUrl: "http://localhost:8008"
-  enableSelfServiceBridging: true
+  enableSelfServiceBridging: false
   disableEveryoneMention: true
   disableHereMention: true
 
