@@ -8,10 +8,10 @@ no_tls: True
 
 pid_file: "/var/run/matrix-synapse.pid"
 
-web_client: True
+web_client: False
 web_client_location: "/opt/riot"
 
-public_baseurl: https://matrix.qipl.org/
+public_baseurl: https://matrix.proglangdesign.net/
 
 # do not restrict federation domains
 # federation_domain_whitelist: []
@@ -74,7 +74,7 @@ trusted_third_party_id_servers:
     - riot.im
 
 auto_join_rooms:
-    - "#info:matrix.qipl.org"
+    - "#info:matrix.proglangdesign.net"
 
 room_invite_state_types:
     - "m.room.join_rules"

@@ -4,7 +4,7 @@ server {
 
 	server_name _;
 
-	return 301 https://$host$request_uri;
+	return 308 https://$host$request_uri;
 }
 
 server {
@@ -13,5 +13,5 @@ server {
 
 	server_name _;
 
-	return 302 https://matrix.qipl.org$request_uri;
+	return 303 https://www.proglangdesign.net;
 }

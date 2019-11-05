@@ -1,7 +1,7 @@
 homeserver:
   url: "http://localhost:8008"
-  media_url: "https://matrix.qipl.org"
-  domain: "matrix.qipl.org"
+  media_url: "https://matrix.proglangdesign.net"
+  domain: "matrix.proglangdesign.net"
 
   enablePresence: false
 
@@ -27,7 +27,7 @@ ircService:
 
       botConfig:
         enabled: true
-        nick: "qipl-matrix"
+        nick: "pld-matrix-bot"
         password: "\ircBotPassword"
         joinChannelsIfNoUsers: true
 
@@ -44,8 +44,9 @@ ircService:
             incremental: true
 
       mappings:
-        "##programminglanguages": ["!vIxLjPCDpaaUhdPrDF:matrix.qipl.org"]
-        "#proglangdesign": ["!llGWMUlaqNDRJzNGqb:matrix.qipl.org"]
+        "##bridge-test": ["!omDbcokchWSiCJTHGj:matrix.proglangdesign.net"]
+        "##programminglanguages": [" !YZYaMmYZwxFmdDCcNe:matrix.proglangdesign.net"]
+        "#proglangdesign": ["!rnvDwsnubAKPKQXwem:matrix.proglangdesign.net"]
 
       matrixClients:
         userTemplate: "@irc_$NICK"

@@ -1,5 +1,5 @@
 bridge:
-  domain: "matrix.qipl.org"
+  domain: "matrix.proglangdesign.net"
   homeserverUrl: "http://localhost:8008"
   enableSelfServiceBridging: false
   disableEveryoneMention: true
@@ -10,8 +10,8 @@ auth:
   botToken: "\discordBotToken"
 
 database:
-  userStorePath: "\data/matrix-appservice-discord/user-store.db"
-  roomStorePath: "\data/matrix-appservice-discord/room-store.db"
+#  userStorePath: "\data/matrix-appservice-discord/user-store.db"
+#  roomStorePath: "\data/matrix-appservice-discord/room-store.db"
   filename: "\data/matrix-appservice-discord/discord.db"
 
 room:
