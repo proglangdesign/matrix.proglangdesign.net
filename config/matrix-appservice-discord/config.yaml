@@ -10,8 +10,6 @@ auth:
   botToken: "\discordBotToken"
 
 database:
-#  userStorePath: "\data/matrix-appservice-discord/user-store.db"
-#  roomStorePath: "\data/matrix-appservice-discord/room-store.db"
   filename: "\data/matrix-appservice-discord/discord.db"
 
 room:

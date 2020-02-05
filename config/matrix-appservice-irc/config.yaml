@@ -3,7 +3,7 @@ homeserver:
   media_url: "https://matrix.proglangdesign.net"
   domain: "matrix.proglangdesign.net"
 
-  enablePresence: false
+  enablePresence: true
 
 ircService:
   databaseUri: "nedb://\data/matrix-appservice-irc"
@@ -34,9 +34,11 @@ ircService:
       membershipLists:
         enabled: true
 
+        floodDelayMs: 10000
+
         global:
           ircToMatrix:
-            initial: false
+            initial: true
             incremental: true
 
           matrixToIrc:
@@ -44,9 +46,12 @@ ircService:
             incremental: true
 
       mappings:
-        "##bridge-test": ["!omDbcokchWSiCJTHGj:matrix.proglangdesign.net"]
-        "##programminglanguages": [" !YZYaMmYZwxFmdDCcNe:matrix.proglangdesign.net"]
-        "#proglangdesign": ["!rnvDwsnubAKPKQXwem:matrix.proglangdesign.net"]
+        "##bridge-test":
+            roomIds: ["!omDbcokchWSiCJTHGj:matrix.proglangdesign.net"]
+        "##programminglanguages":
+            roomIds: [" !YZYaMmYZwxFmdDCcNe:matrix.proglangdesign.net"]
+        "#proglangdesign":
+            roomIds: ["!rnvDwsnubAKPKQXwem:matrix.proglangdesign.net"]
 
       matrixClients:
         userTemplate: "@irc_$NICK"
