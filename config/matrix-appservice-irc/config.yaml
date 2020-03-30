@@ -49,7 +49,7 @@ ircService:
         "##bridge-test":
             roomIds: ["!omDbcokchWSiCJTHGj:matrix.proglangdesign.net"]
         "##programminglanguages":
-            roomIds: [" !YZYaMmYZwxFmdDCcNe:matrix.proglangdesign.net"]
+            roomIds: ["!YZYaMmYZwxFmdDCcNe:matrix.proglangdesign.net"]
         "#proglangdesign":
             roomIds: ["!rnvDwsnubAKPKQXwem:matrix.proglangdesign.net"]
 
