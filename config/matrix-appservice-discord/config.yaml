@@ -4,6 +4,11 @@ bridge:
   enableSelfServiceBridging: false
   disableEveryoneMention: true
   disableHereMention: true
+  disablePresence: true
+  disableTypingNotifications: true
+  disableDeletionForwarding: true
+  disableReadRecipts: true
+  disableJoinLeaveNotifications: true
 
 auth:
   clientID: "541288099972513792"

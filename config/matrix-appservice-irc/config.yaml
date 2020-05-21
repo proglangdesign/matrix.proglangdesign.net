@@ -3,13 +3,13 @@ homeserver:
   media_url: "https://matrix.proglangdesign.net"
   domain: "matrix.proglangdesign.net"
 
-  enablePresence: true
+  enablePresence: false
 
 ircService:
   databaseUri: "nedb://\data/matrix-appservice-irc"
 
   servers:
-    chat.freenode.net:
+    chat.us.freenode.net:
       name: "Freenode"
       networkId: "freenode"
 
@@ -38,7 +38,7 @@ ircService:
 
         global:
           ircToMatrix:
-            initial: true
+            initial: false
             incremental: true
 
           matrixToIrc:
